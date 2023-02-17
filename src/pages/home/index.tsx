@@ -36,7 +36,7 @@ export default function Home() {
               "https://cdn.discordapp.com/attachments/771766413563002920/1076226282070749244/logo-removebg-preview_1.png"
             }
             alt=""
-            className="max-w-[240px] max-sm:w-[50%] max-sm:mt-4"
+            className="max-w-[240px] max-sm:w-[65%] max-sm:mt-4"
           />
         </div>
       </section>
