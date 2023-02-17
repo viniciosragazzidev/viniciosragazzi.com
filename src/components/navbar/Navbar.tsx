@@ -36,7 +36,7 @@ export default function Navbar() {
            open ? "max-md:translate-y-[100vh]" : "max-md:translate-y-0"
          }`}
       >
-        <span className="hidden max-md:flex absolute top-0 right-0 m-6">
+        <span className="hidden max-md:flex absolute top-0 right-0 m-6 text-primary-dark">
           <CloseIcon
             className=" cursor-pointer"
             onClick={() => {

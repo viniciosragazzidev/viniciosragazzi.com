@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html.dark .secondary {
+  display: flex !important;
+}
+
 body * {
   font-family: "Inter", sans-serif;
 }
@@ -13,6 +17,9 @@ body * .text-size {
 body * .text-size2 {
   font-size: clamp(11px, 1.2vw, 14px);
 }
+body * .boxShadow {
+  box-shadow: rgba(145, 74, 212, 0.137254902) 0px 8px 24px, rgba(155, 75, 230, 0.2117647059) 0px 16px 56px, rgba(138, 14, 255, 0.6980392157) 0px 24px 80px;
+}
 body * nav {
   animation: 2.2s ease-out 0s 1 normal backwards running show;
 }
@@ -23,13 +30,11 @@ body * section.top {
 body * .secondary {
   display: grid;
   place-items: center;
-  mix-blend-mode: lighten;
   position: relative;
   z-index: 1;
-  -webkit-mask-image: linear-gradient(black 60%, transparent);
   animation: 2.2s ease-out 0s 1 normal backwards running aaa;
+  display: none;
 }
-
 @keyframes aaa {
   0% {
     opacity: 0;

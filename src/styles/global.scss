@@ -1,7 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html {
+  &.dark {
+    .secondary {
+      display: flex !important;
+    }
+  }
+}
 body * {
   font-family: "Inter", sans-serif;
 
@@ -14,7 +20,9 @@ body * {
   .text-size2 {
     font-size: clamp(11px, 1.2vw, 14px);
   }
-
+  .boxShadow {
+    box-shadow: #914ad423 0px 8px 24px, #9b4be636 0px 16px 56px, #8a0effb2 0px 24px 80px;
+  }
   nav {
     animation: 2.2s ease-out 0s 1 normal backwards running show;
   }
@@ -27,11 +35,12 @@ body * {
   .secondary {
     display: grid;
     place-items: center;
-    mix-blend-mode: lighten;
     position: relative;
     z-index: 1;
-    -webkit-mask-image: linear-gradient(black 60%, transparent);
     animation: 2.2s ease-out 0s 1 normal backwards running aaa;
+    display: none;
+    &.align-top {
+    }
   }
 }
 
