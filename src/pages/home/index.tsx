@@ -32,7 +32,7 @@ export default function Home() {
               "https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.81b602e3.png&w=640&q=100"
             }
             alt=""
-            className="max-w-[240px] max-sm:w-full"
+            className="max-w-[240px] max-sm:w-[50%] max-sm:mt-4"
           />
         </div>
       </section>
