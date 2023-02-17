@@ -3,7 +3,7 @@ import rocket from "../../images/rocket.svg";
 export default function Home() {
   return (
     <div className="w-full min-h-screen">
-      <section className="top w-full h-screen flex-2 flex  max-md:flex-col mt-4 md:mt-24 md:px-16 px-6 overflow-hidden">
+      <section className="top w-full h-full flex-2 flex  max-md:flex-col mt-4 md:mt-24 md:px-16 px-6 overflow-hidden">
         <div className="primary lg:max-w-[55%] flex flex-col gap-2">
           <span className="text-size2 dark:text-purple-500 text-purple-600 py-1 px-2 font-semibold  max-w-[180px] rounded-full">
             {" "}
