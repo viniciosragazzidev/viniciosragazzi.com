@@ -1,6 +1,5 @@
 import React from "react";
 import rocket from "../../images/rocket.svg";
-import Spline from "@splinetool/react-spline";
 
 export default function Home() {
   return (
@@ -28,8 +27,14 @@ export default function Home() {
             ou clique para entrar em contato
           </p>
         </div>
-        <div className="secondary w-full flex-1 flex justify-center items-center  min-h-[400px]  max-md:mt-10">
-          <Spline scene="https://prod.spline.design/qcrbjlgJono90mdD/scene.splinecode" />
+        <div className="secondary w-full flex-1 flex justify-center items-center md:max-h-[20rem] ">
+          <img
+            src={
+              "https://linear.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.81b602e3.png&w=640&q=100"
+            }
+            alt=""
+            className="max-w-[240px] max-sm:w-[50%] max-sm:mt-4"
+          />
         </div>
       </section>
     </div>
