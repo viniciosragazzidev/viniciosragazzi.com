@@ -15,6 +15,9 @@ body * {
   .title-size {
     font-size: clamp(26px, 8vw, 46px);
   }
+  .title-size2 {
+    font-size: clamp(24px, 6vw, 34px);
+  }
   .text-size {
     font-size: clamp(11px, 1.2vw, 16px);
   }
@@ -31,6 +34,24 @@ body * {
     &.top {
       animation: 2.2s ease-out 0s 1 normal backwards running show;
       animation-delay: 0.5s;
+    }
+
+    &#projects {
+      .cards {
+        .shadowQ {
+          -webkit-box-shadow: inset 0px -76px 53px -11px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: inset 0px -76px 53px -11px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0px -76px 53px -11px rgba(0, 0, 0, 0.75);
+        }
+        .card {
+          object-fit: cover;
+
+          img {
+            height: 100% !important;
+            object-fit: cover !important;
+          }
+        }
+      }
     }
   }
   .secondary {

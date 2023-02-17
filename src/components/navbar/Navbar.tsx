@@ -62,7 +62,7 @@ export default function Navbar() {
                 setOpen(false);
               }}
               className="hover:opacity-90  transition-all "
-              href="/"
+              href="#projects"
             >
               Projects
             </a>

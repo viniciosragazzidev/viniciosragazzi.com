@@ -14,6 +14,9 @@ body * {
 body * .title-size {
   font-size: clamp(26px, 8vw, 46px);
 }
+body * .title-size2 {
+  font-size: clamp(24px, 6vw, 34px);
+}
 body * .text-size {
   font-size: clamp(11px, 1.2vw, 16px);
 }
@@ -29,6 +32,18 @@ body * nav {
 body * section.top {
   animation: 2.2s ease-out 0s 1 normal backwards running show;
   animation-delay: 0.5s;
+}
+body * section#projects .cards .shadowQ {
+  box-shadow: inset 0px -76px 53px -11px rgba(0, 0, 0, 0.75);
+}
+body * section#projects .cards .card {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body * section#projects .cards .card img {
+  height: 100% !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
 }
 body * .secondary {
   display: grid;
