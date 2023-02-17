@@ -46,24 +46,45 @@ export default function Navbar() {
         </span>
         <ul className="flex justify-center md:flex-1 gap-10 text-sm max-[768px]:flex-col max-md:text-primary-dark">
           <li className="hover:scale-95 transition-all">
-            <a className="hover:opacity-90  transition-all " href="/">
+            <a
+              onClick={() => {
+                setOpen(false);
+              }}
+              className="hover:opacity-90  transition-all "
+              href="#skills"
+            >
               Skills
             </a>
           </li>
           <li className="hover:scale-95 transition-all">
-            <a className="hover:opacity-90  transition-all " href="/">
+            <a
+              onClick={() => {
+                setOpen(false);
+              }}
+              className="hover:opacity-90  transition-all "
+              href="/"
+            >
               Projects
             </a>
           </li>
           <li className="hover:scale-95 transition-all">
-            <a className="hover:opacity-90  transition-all " href="/">
+            <a
+              onClick={() => {
+                setOpen(false);
+              }}
+              className="hover:opacity-90  transition-all "
+              href="/"
+            >
               Contact
             </a>
           </li>
         </ul>
 
         <span
-          onClick={() => handleModeDark()}
+          onClick={() => {
+            handleModeDark();
+            setOpen(false);
+          }}
           className="hover:cursor-pointer hover:opacity-95 hover:scale-90 hover:rotate-45 transition-all max-md:text-primary-dark"
         >
           {modeDark ? <FlashlightOffIcon /> : <FlashlightOnIcon />}
