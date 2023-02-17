@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body * {
+  font-family: "Inter", sans-serif;
+
+  .title-size {
+    font-size: clamp(26px, 8vw, 46px);
+  }
+  .text-size {
+    font-size: clamp(11px, 1.2vw, 16px);
+  }
+  .text-size2 {
+    font-size: clamp(11px, 1.2vw, 14px);
+  }
+
+  nav {
+    animation: 2.2s ease-out 0s 1 normal backwards running show;
+  }
+  section {
+    &.top {
+      animation: 2.2s ease-out 0s 1 normal backwards running show;
+      animation-delay: 0.5s;
+    }
+  }
+  .secondary {
+    display: grid;
+    place-items: center;
+    mix-blend-mode: lighten;
+    margin-bottom: -64px;
+    position: relative;
+    z-index: 1;
+    -webkit-mask-image: linear-gradient(black 60%, transparent);
+    animation: 2.2s ease-out 0s 1 normal backwards running aaa;
+  }
+}
+
+@keyframes aaa {
+  0% {
+    opacity: 0;
+    transform: translateY(20%) rotate(40deg);
+    filter: contrast(400%) blur(4px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: none;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
