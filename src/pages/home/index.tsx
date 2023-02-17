@@ -142,51 +142,51 @@ export default function Home() {
             Projects
           </h2>
         </header>
-        <div className="cards mt-6 relative py-4 h-full md:h-[80vh] md:mb-52 overflow-hidden grid  lg:grid-cols-4 md:grid-cols-3 max-md:grid-cols-3 max-[666px]:grid-cols-2 max-[420px]:grid-cols-1 grid-flow-row gap-5">
+        <div className="cards mt-6 max-[420px]:flex max-[420px]:flex-col   max-[420px]:items-center relative py-4 h-full md:h-[80vh] md:mb-52 overflow-hidden grid  lg:grid-cols-4 md:grid-cols-3 max-md:grid-cols-3 max-[666px]:grid-cols-2 max-[420px]:grid-cols-1 grid-flow-row gap-5">
           <div className="absolute w-full h-36 bottom-0 left-0 shadowQ"></div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-full   bg-secondary-light rounded-lg overflow-hidden">
+          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
             <img
               src="https://framerusercontent.com/images/fVzjwoqp6sALfFbvwVT7EWSl0.png"
               alt=""
             />
           </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-full   bg-secondary-light rounded-lg overflow-hidden">
+          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
             <img
               src="https://framerusercontent.com/images/4JbEH1fSk3JlM5cLXngKLl1eDwM.jpg"
               alt=""
             />
           </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-full   bg-secondary-light rounded-lg overflow-hidden">
+          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
             <img
               src="https://framerusercontent.com/images/fVzjwoqp6sALfFbvwVT7EWSl0.png"
               alt=""
             />
           </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-full   bg-secondary-light rounded-lg overflow-hidden">
+          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
             <img
               src="https://framerusercontent.com/images/4JbEH1fSk3JlM5cLXngKLl1eDwM.jpg"
               alt=""
             />
           </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-full   bg-secondary-light rounded-lg overflow-hidden">
+          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
             <img
               src="https://framerusercontent.com/images/fVzjwoqp6sALfFbvwVT7EWSl0.png"
               alt=""
             />
           </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-full   bg-secondary-light rounded-lg overflow-hidden">
+          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
             <img
               src="https://framerusercontent.com/images/4JbEH1fSk3JlM5cLXngKLl1eDwM.jpg"
               alt=""
             />
           </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-full   bg-secondary-light rounded-lg overflow-hidden">
+          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
             <img
               src="https://framerusercontent.com/images/fVzjwoqp6sALfFbvwVT7EWSl0.png"
               alt=""
             />
           </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-full   bg-secondary-light rounded-lg overflow-hidden">
+          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
             <img
               src="https://framerusercontent.com/images/4JbEH1fSk3JlM5cLXngKLl1eDwM.jpg"
               alt=""
