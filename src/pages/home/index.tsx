@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import rocket from "../../images/rocket.svg";
 import { AiFillHtml5 } from "react-icons/ai";
 import { IoLogoCss3 } from "react-icons/io";
 import { DiJavascript, DiNodejs } from "react-icons/di";
 import { RiReactjsLine } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
+import PinchIcon from "@mui/icons-material/Pinch";
 export default function Home() {
+  const [show, setShow] = useState(false);
   return (
     <div className="w-full min-h-screen flex flex-col gap-20 md:gap-40">
       <section className="top w-full h-full flex-2 flex  max-md:flex-col  mt-4 pt-4 md:mt-24 md:px-16 px-6 overflow-hidden">
@@ -142,8 +144,20 @@ export default function Home() {
             Projects
           </h2>
         </header>
-        <div className="cards mt-6 max-[420px]:flex max-[420px]:flex-col   max-[420px]:items-center relative py-4 h-full md:h-[80vh] md:mb-52 overflow-hidden grid  lg:grid-cols-4 md:grid-cols-3 max-md:grid-cols-3 max-[666px]:grid-cols-2 max-[420px]:grid-cols-1 grid-flow-row gap-5">
+        <div
+          className={`cards mt-6 max-[420px]:flex max-[420px]:flex-col   max-[420px]:items-center relative py-4  md:mb-52 overflow-hidden grid  lg:grid-cols-4 md:grid-cols-3 max-md:grid-cols-3 max-[666px]:grid-cols-2 max-[420px]:grid-cols-1 grid-flow-row gap-5 transition-all ${
+            show ? "h-full" : "h-[160vh] md:h-[80vh]"
+          }`}
+        >
           <div className="absolute w-full h-36 bottom-0 left-0 shadowQ"></div>
+          <span className="absolute bottom-0 w-full flex justify-center dark:text-primary-dark text-primary-light mb-4 ">
+            <PinchIcon
+              fontSize="large"
+              onClick={() => {
+                setShow(!show);
+              }}
+            />
+          </span>
           <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
             <img
               src="https://framerusercontent.com/images/fVzjwoqp6sALfFbvwVT7EWSl0.png"
