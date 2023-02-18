@@ -37,19 +37,12 @@ body * {
     }
 
     &#projects {
-      .cards {
-        .shadowQ {
-          -webkit-box-shadow: inset 0px -76px 53px -11px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: inset 0px -76px 53px -11px rgba(0, 0, 0, 0.75);
-          box-shadow: inset 0px -76px 53px -11px rgba(0, 0, 0, 0.75);
-        }
-        .card {
-          object-fit: cover;
+      .card {
+        object-fit: cover;
 
-          img {
-            height: 100% !important;
-            object-fit: cover !important;
-          }
+        img {
+          height: 100% !important;
+          object-fit: cover !important;
         }
       }
     }

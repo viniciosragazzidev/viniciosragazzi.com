@@ -5,11 +5,12 @@ import { IoLogoCss3 } from "react-icons/io";
 import { DiJavascript, DiNodejs } from "react-icons/di";
 import { RiReactjsLine } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
-import PinchIcon from "@mui/icons-material/Pinch";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
 export default function Home() {
-  const [show, setShow] = useState(false);
   return (
-    <div className="w-full min-h-screen flex flex-col gap-20 md:gap-40">
+    <div className="w-full min-h-screen flex flex-col gap-20 md:gap-28">
       <section className="top w-full h-full flex-2 flex  max-md:flex-col  mt-4 pt-4 md:mt-24 md:px-16 px-6 overflow-hidden">
         <div className="primary lg:max-w-[55%] flex flex-col gap-2">
           <span className="text-size2 dark:text-purple-500 text-purple-600 py-1 px-2 font-semibold  max-w-[180px] rounded-full">
@@ -44,7 +45,7 @@ export default function Home() {
       </section>
       <section
         id="skills"
-        className="w-full  md:px-28 px-6  pt-6 flex justify-center"
+        className="w-full  md:px-28 px-6  pt-14 flex justify-center"
       >
         <div
           className="cards w-full  grid  lg:grid-cols-3 lg:grid-rows-2 lg:gap-8
@@ -54,7 +55,7 @@ export default function Home() {
           <div className="card w-full  max-w-lg flex flex-col gap-2">
             <div className="header flex dark:text-primary-dark font-semibold ">
               <span className="flex items-center gap-2 text-lg max-md:text-base">
-                <AiFillHtml5 className="text-button-primary dark:text-purple-200 text-lg boxShadow" />{" "}
+                <AiFillHtml5 className="text-button-primary dark:text-purple-200 text-lg boxShadow" />
                 HTML
               </span>
             </div>
@@ -68,7 +69,7 @@ export default function Home() {
           <div className="card w-full  max-w-lg flex flex-col gap-2">
             <div className="header flex dark:text-primary-dark font-semibold ">
               <span className="flex items-center gap-2 text-lg max-md:text-base">
-                <IoLogoCss3 className="text-button-primary dark:text-purple-200 text-lg boxShadow" />{" "}
+                <IoLogoCss3 className="text-button-primary dark:text-purple-200 text-lg boxShadow" />
                 CSS
               </span>
             </div>
@@ -82,7 +83,7 @@ export default function Home() {
           <div className="card w-full  max-w-lg flex flex-col gap-2">
             <div className="header flex dark:text-primary-dark font-semibold ">
               <span className="flex items-center gap-2 text-lg max-md:text-base">
-                <DiJavascript className="text-button-primary dark:text-purple-200 text-lg boxShadow" />{" "}
+                <DiJavascript className="text-button-primary dark:text-purple-200 text-lg boxShadow" />
                 JavaScript
               </span>
             </div>
@@ -96,7 +97,7 @@ export default function Home() {
           <div className="card w-full  max-w-lg flex flex-col gap-2">
             <div className="header flex dark:text-primary-dark font-semibold  ">
               <span className="flex items-center gap-2 text-lg max-md:text-base">
-                <SiTypescript className="text-button-primary dark:text-purple-200 text-lg boxShadow" />{" "}
+                <SiTypescript className="text-button-primary dark:text-purple-200 text-lg boxShadow" />
                 TypeScript
               </span>
             </div>
@@ -110,7 +111,7 @@ export default function Home() {
           <div className="card w-full  max-w-lg flex flex-col gap-2">
             <div className="header flex dark:text-primary-dark font-semibold ">
               <span className="flex items-center gap-2 text-lg max-md:text-base">
-                <RiReactjsLine className="text-button-primary dark:text-purple-200 text-lg boxShadow" />{" "}
+                <RiReactjsLine className="text-button-primary dark:text-purple-200 text-lg boxShadow" />
                 ReactJs
               </span>
             </div>
@@ -124,7 +125,7 @@ export default function Home() {
           <div className="card w-full  max-w-lg flex flex-col gap-2">
             <div className="header flex dark:text-primary-dark font-semibold ">
               <span className="flex items-center gap-2 text-lg max-md:text-base">
-                <DiNodejs className="text-button-primary dark:text-purple-200 text-lg boxShadow" />{" "}
+                <DiNodejs className="text-button-primary dark:text-purple-200 text-lg boxShadow" />
                 NodeJs
               </span>
             </div>
@@ -145,67 +146,149 @@ export default function Home() {
           </h2>
         </header>
         <div
-          className={`cards mt-6 max-[420px]:flex max-[420px]:flex-col   max-[420px]:items-center relative py-4  md:mb-52 overflow-hidden grid  lg:grid-cols-4 md:grid-cols-3 max-md:grid-cols-3 max-[666px]:grid-cols-2 max-[420px]:grid-cols-1 grid-flow-row gap-5 transition-all ${
-            show ? "h-full" : "h-[160vh] md:h-[80vh]"
-          }`}
+          className={`cards mt-6   relative py-4  md:mb-52 overflow-hidden 
+          `}
         >
-          <div className="absolute w-full h-36 bottom-0 left-0 shadowQ"></div>
-          <span className="absolute bottom-0 w-full flex justify-center dark:text-primary-dark text-primary-light mb-4 ">
-            <PinchIcon
-              fontSize="large"
-              onClick={() => {
-                setShow(!show);
-              }}
-            />
-          </span>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
-            <img
-              src="https://framerusercontent.com/images/fVzjwoqp6sALfFbvwVT7EWSl0.png"
-              alt=""
-            />
-          </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
-            <img
-              src="https://framerusercontent.com/images/4JbEH1fSk3JlM5cLXngKLl1eDwM.jpg"
-              alt=""
-            />
-          </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
-            <img
-              src="https://framerusercontent.com/images/fVzjwoqp6sALfFbvwVT7EWSl0.png"
-              alt=""
-            />
-          </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
-            <img
-              src="https://framerusercontent.com/images/4JbEH1fSk3JlM5cLXngKLl1eDwM.jpg"
-              alt=""
-            />
-          </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
-            <img
-              src="https://framerusercontent.com/images/fVzjwoqp6sALfFbvwVT7EWSl0.png"
-              alt=""
-            />
-          </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
-            <img
-              src="https://framerusercontent.com/images/4JbEH1fSk3JlM5cLXngKLl1eDwM.jpg"
-              alt=""
-            />
-          </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
-            <img
-              src="https://framerusercontent.com/images/fVzjwoqp6sALfFbvwVT7EWSl0.png"
-              alt=""
-            />
-          </div>
-          <div className="card w-full sm:max-w-xs min-h-[320px] max-md:w-[200px] max-[666px]:w-full max-[500px]:min-h-[240px] max-[420px]:w-[75%]   bg-secondary-light rounded-lg overflow-hidden">
-            <img
-              src="https://framerusercontent.com/images/4JbEH1fSk3JlM5cLXngKLl1eDwM.jpg"
-              alt=""
-            />
-          </div>
+          <Swiper
+            spaceBetween={0}
+            slidesPerView={1}
+            breakpoints={{
+              425: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div className="card w-full">
+                <video
+                  poster="https://cdn.godly.website/862b33ed-44d2-4a5e-b876-f733e75ac331.jpg?width=360&amp;quality=70"
+                  playsInline
+                  autoPlay
+                  loop
+                  className="c-bXaNzB c-bXaNzB-ibZHHTt-css"
+                >
+                  <source
+                    type="video/webm"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/fqp4kcvlrh5ub9hctdwk.webm"
+                  />
+                  <source
+                    type="video/mp4"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/fqp4kcvlrh5ub9hctdwk.mp4"
+                  />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card w-full">
+                <video
+                  poster="https://cdn.godly.website/ac493e4e-bcec-4a11-ae55-df249d36cc09.jpg?width=360&amp;quality=70"
+                  playsInline
+                  autoPlay
+                  loop
+                  className="c-bXaNzB c-bXaNzB-ibZHHTt-css"
+                >
+                  <source
+                    type="video/webm"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/d30mhj1bavkfrghjjh5n.webm"
+                  />
+                  <source
+                    type="video/mp4"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/d30mhj1bavkfrghjjh5n.mp4"
+                  />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card w-full">
+                <video
+                  poster="https://cdn.godly.website/260f4522-82e2-453b-8335-b93def2770d7.jpg?width=360&amp;quality=70"
+                  playsInline
+                  autoPlay
+                  loop
+                  className="c-bXaNzB c-bXaNzB-ibZHHTt-css"
+                >
+                  <source
+                    type="video/webm"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/qb5vgzsqpej7juf5gc56.webm"
+                  />
+                  <source
+                    type="video/mp4"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/qb5vgzsqpej7juf5gc56.mp4"
+                  />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card w-full">
+                <video
+                  poster="https://cdn.godly.website/862b33ed-44d2-4a5e-b876-f733e75ac331.jpg?width=360&amp;quality=70"
+                  playsInline
+                  autoPlay
+                  loop
+                  className="c-bXaNzB c-bXaNzB-ibZHHTt-css"
+                >
+                  <source
+                    type="video/webm"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/fqp4kcvlrh5ub9hctdwk.webm"
+                  />
+                  <source
+                    type="video/mp4"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/fqp4kcvlrh5ub9hctdwk.mp4"
+                  />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card w-full">
+                <video
+                  poster="https://cdn.godly.website/ac493e4e-bcec-4a11-ae55-df249d36cc09.jpg?width=360&amp;quality=70"
+                  playsInline
+                  autoPlay
+                  loop
+                  className="c-bXaNzB c-bXaNzB-ibZHHTt-css"
+                >
+                  <source
+                    type="video/webm"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/d30mhj1bavkfrghjjh5n.webm"
+                  />
+                  <source
+                    type="video/mp4"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/d30mhj1bavkfrghjjh5n.mp4"
+                  />
+                </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card w-full">
+                <video
+                  poster="https://cdn.godly.website/260f4522-82e2-453b-8335-b93def2770d7.jpg?width=360&amp;quality=70"
+                  playsInline
+                  autoPlay
+                  loop
+                  className="c-bXaNzB c-bXaNzB-ibZHHTt-css"
+                >
+                  <source
+                    type="video/webm"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/qb5vgzsqpej7juf5gc56.webm"
+                  />
+                  <source
+                    type="video/mp4"
+                    src="https://video.godly.website/video/upload/w_360/q_70/recordings/qb5vgzsqpej7juf5gc56.mp4"
+                  />
+                </video>
+              </div>
+            </SwiperSlide>
+            ...
+          </Swiper>
         </div>
       </section>
     </div>
