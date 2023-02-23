@@ -7,12 +7,22 @@ import { DadosContext } from "../../context/ContextApp";
 export default function Navbar() {
   const [modeDark, setModeDark] = useState(true);
 
-  const { open, setOpen } = useContext(DadosContext);
+  const { open, setOpen,modalOpen,setModalOpen } = useContext(DadosContext);
 
   const handleModeDark = () => {
     setModeDark(!modeDark);
   };
+const handleOpenMenu = () =>{
+  setOpen(!open)
+  console.log(open);
+  
+}
+const handleCloseMenu = () =>{
+  setOpen(!open)
 
+  console.log(open);
+
+}
   useEffect(() => {
     if (modeDark) {
       document.documentElement.classList.add("dark");
@@ -21,6 +31,14 @@ export default function Navbar() {
     }
   }, [modeDark]);
 
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "a" && modalOpen === false) {
+
+        
+        setModalOpen(true);
+        setOpen(false)
+    }
+  });
   return (
     <nav className="w-full h-16 md:px-16 px-6 flex items-center max-md:justify-between">
       <a
@@ -40,7 +58,7 @@ export default function Navbar() {
           <CloseIcon
             className=" cursor-pointer"
             onClick={() => {
-              setOpen(false);
+             handleCloseMenu()
             }}
           />
         </span>
@@ -90,12 +108,7 @@ export default function Navbar() {
           {modeDark ? <FlashlightOffIcon /> : <FlashlightOnIcon />}
         </span>
       </div>
-      <span
-        className="md:hidden"
-        onClick={() => {
-          setOpen(true);
-        }}
-      >
+      <span className="md:hidden" onClick={() => handleOpenMenu()}>
         <DragHandleIcon className=" dark:text-primary-dark text-primary-light cursor-pointer" />
       </span>
     </nav>

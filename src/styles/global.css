@@ -26,6 +26,18 @@ body * .text-size2 {
 body * .boxShadow {
   box-shadow: rgba(145, 74, 212, 0.137254902) 0px 8px 24px, rgba(155, 75, 230, 0.2117647059) 0px 16px 56px, rgba(138, 14, 255, 0.6980392157) 0px 24px 80px;
 }
+body * .show {
+  display: flex;
+  animation: 0.2s ease-out 0s 1 normal backwards running show;
+}
+body * .card-icon {
+  font-size: clamp(26px, 8vw, 46px);
+  transition: all 0.4s ease;
+}
+body * .card-icon:hover {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
 body * nav {
   animation: 2.2s ease-out 0s 1 normal backwards running show;
 }
@@ -33,14 +45,11 @@ body * section.top {
   animation: 2.2s ease-out 0s 1 normal backwards running show;
   animation-delay: 0.5s;
 }
-body * section#projects .cards .shadowQ {
-  box-shadow: inset 0px -76px 53px -11px rgba(0, 0, 0, 0.75);
-}
-body * section#projects .cards .card {
+body * section#projects .card {
   -o-object-fit: cover;
      object-fit: cover;
 }
-body * section#projects .cards .card img {
+body * section#projects .card img {
   height: 100% !important;
   -o-object-fit: cover !important;
      object-fit: cover !important;
@@ -68,6 +77,9 @@ body * .secondary {
 @keyframes show {
   0% {
     opacity: 0;
+  }
+  80% {
+    display: flex;
   }
   100% {
     opacity: 1;
