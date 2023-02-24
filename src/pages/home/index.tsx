@@ -13,12 +13,27 @@ import { DadosContext } from "../../context/ContextApp";
 export default function Home() {
   const { modalOpen, setModalOpen, open, setOpen } = useContext(DadosContext);
 
+  useEffect(() => {
+    const intersectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    });
+    let secList = document.querySelectorAll(".sec");
 
+    secList.forEach((sec) => intersectionObserver.observe(sec));
+
+    return () => intersectionObserver.disconnect();
+  }, []);
 
   return (
     <div className="w-full min-h-screen flex flex-col gap-20 md:gap-28">
       <Contact />
-      <section className="top w-full h-full flex-2 flex  max-md:flex-col  mt-4 pt-4 md:mt-24 md:px-16 px-6 overflow-hidden">
+      <section className="sec top w-full h-full flex-2 flex  max-md:flex-col  mt-4 pt-4 md:mt-24 md:px-16 px-6 overflow-hidden">
         <div className="primary lg:max-w-[55%] flex flex-col gap-2">
           <span className="text-size2 dark:text-purple-500 text-purple-600 py-1 px-2 font-semibold  max-w-[180px] rounded-full">
             Front-End Developer
@@ -32,9 +47,14 @@ export default function Home() {
             spam folders.
           </p>
 
-          <p onClick={()=>{setModalOpen(true)}} className="text-size2 dark:text-secondary-dark text-secondary-light font-semibold mt-6 cursor-pointer hover:opacity-95 transition-all">
+          <p
+            onClick={() => {
+              setModalOpen(true);
+            }}
+            className="text-size2 dark:text-secondary-dark text-secondary-light font-semibold mt-6 cursor-pointer hover:opacity-95 transition-all"
+          >
             Pressione
-            <span  className="p-1 px-2 max-md:px-1 mx-1 dark:text-secondary-light dark:bg-button-secondary-dark text-primary-dark bg-button-primary rounded-md">
+            <span className="p-1 px-2 max-md:px-1 mx-1 dark:text-secondary-light dark:bg-button-secondary-dark text-primary-dark bg-button-primary rounded-md">
               A
             </span>
             ou clique para entrar em contato
@@ -52,7 +72,7 @@ export default function Home() {
       </section>
       <section
         id="skills"
-        className="w-full  md:px-28 px-6  pt-14 flex justify-center"
+        className="w-full sec  md:px-28 px-6  pt-14 flex justify-center"
       >
         <div
           className="cards w-full  grid  lg:grid-cols-3 lg:grid-rows-2 lg:gap-8
@@ -146,7 +166,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className=" md:px-16 px-6  pt-6  relative">
+      <section id="projects" className="sec md:px-16 px-6  pt-6  relative">
         <header>
           <h2 className="title-size2 font-semibold text-primary-light dark:text-primary-dark ">
             Projetos
