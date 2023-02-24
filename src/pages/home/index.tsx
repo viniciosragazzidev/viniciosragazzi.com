@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen flex flex-col gap-20 md:gap-28">
       <Contact />
-      <section className="sec top w-full h-full flex-2 flex  max-md:flex-col  mt-4 pt-4 md:mt-24 md:px-16 px-6 overflow-hidden">
+      <section className="sec show top w-full h-full flex-2 flex  max-md:flex-col  mt-4 pt-4 md:mt-24 md:px-16 px-6 overflow-hidden">
         <div className="primary lg:max-w-[55%] flex flex-col gap-2">
           <span className="text-size2 dark:text-purple-500 text-purple-600 py-1 px-2 font-semibold  max-w-[180px] rounded-full">
             Front-End Developer

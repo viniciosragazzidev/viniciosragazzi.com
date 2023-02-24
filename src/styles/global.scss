@@ -28,9 +28,8 @@ body * {
     box-shadow: #914ad423 0px 8px 24px, #9b4be636 0px 16px 56px, #8a0effb2 0px 24px 80px;
   }
   .show {
-    opacity: 1 !important;
     transform: translateX(0);
-    animation:0.6s ease-out forwards   transformAnimation;
+    animation: 0.6s ease-out forwards transformAnimation;
   }
   .card-icon {
     font-size: clamp(26px, 8vw, 46px);
@@ -46,10 +45,9 @@ body * {
   section {
     &.sec {
       opacity: 0;
-    transform: translateX(-50px);
+      transform: translateX(-50px);
 
-    transition: all 1s ease;
-
+      transition: all 1s ease;
     }
 
     &#projects {
@@ -104,11 +102,12 @@ body * {
 @keyframes transformAnimation {
   0% {
     transform: translateX(-50px);
-
+    opacity: 0;
   }
 
   100% {
-    transform: translateX(0px);
+    opacity: 1;
 
+    transform: translateX(0px);
   }
 }

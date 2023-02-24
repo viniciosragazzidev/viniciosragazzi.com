@@ -27,7 +27,6 @@ body * .boxShadow {
   box-shadow: rgba(145, 74, 212, 0.137254902) 0px 8px 24px, rgba(155, 75, 230, 0.2117647059) 0px 16px 56px, rgba(138, 14, 255, 0.6980392157) 0px 24px 80px;
 }
 body * .show {
-  opacity: 1 !important;
   transform: translateX(0);
   animation: 0.6s ease-out forwards transformAnimation;
 }
@@ -90,8 +89,10 @@ body * .secondary {
 @keyframes transformAnimation {
   0% {
     transform: translateX(-50px);
+    opacity: 0;
   }
   100% {
+    opacity: 1;
     transform: translateX(0px);
   }
 }/*# sourceMappingURL=global.css.map */
