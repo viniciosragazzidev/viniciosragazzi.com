@@ -45,7 +45,7 @@ body * {
   section {
     &.sec {
       opacity: 0;
-      transform: translateX(-50px);
+      transform: translateX(-20px);
 
       transition: all 1s ease;
     }
@@ -101,7 +101,7 @@ body * {
 
 @keyframes transformAnimation {
   0% {
-    transform: translateX(-50px);
+    transform: translateX(-20px);
     opacity: 0;
   }
 
